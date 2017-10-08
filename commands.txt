@@ -1,0 +1,41 @@
+git --version: comando para saber la version de git que tenemos instalada
+
+git config --global user.email: sirve para definir mi email de git globalmente en todos los repositorios.
+
+git config --global user.name: sirve para definir mi nombre de usuario de git globalmente en todos los repositorios.
+
+git config --global color.ui true: con esto le decimos a git que coloreé las ramas del repositorio para identificarlas
+
+cd [carpetas o direccion] | cd ../..(moverse hacia atrás entre carpetas) : sirve para movernos entre carpetas, tambien podemos escribir algunas letras de la carpeta hacia donde nos moveremos y con tab, la consola rellenara la direccion o el nombre de la carpeta
+
+mkdir [nombre de la carpeta]: sirve para crear carpetas
+
+ls: sirve para que carpetas tengo dentro de la carpeta en la que estamos
+
+clear o cls: sirve para limpiar la terminal
+
+touch [nombre del archivo] || New-Item [nombre] -type [tipo de archivo] [windows]: sirve para crear archivos
+
+rm [nombre del archivo] : sirve para borrar archivos
+
+rm -rf [nombre de la carpeta] : sirve para borrar carpetas
+
+code [nombre del archivo] : funciona para abrir carpeta, (.) si quieres abrir todo el contenido de dicha carpeta, o solo el nombre del archivo si solo deseas editar dicho archivo
+
+git init [nombre?opcional] : para iniciar un repositorio
+
+Untracked files: Son archivos que están en nuestro Working Directory, lo que aparezca en rojo es lo que se ha modificado y hay que pasarlo al Staging.
+
+git add [archivo]: Nos agrega al archivo al staging area(el limbo) ** -A** nos agrega todos los archivos
+
+git rm --cached: Nos devolvemos un paso
+
+git rm -f [file]: Elimina el archivo por completo.
+
+git add -n [file]: Que no haga nada, confirma si el archivo existe dentro del directorio
+
+Git commit -m [“mensaje”]: Es bueno ser descriptivos con el mensaje para saber lo que se hizo en ese commit y para informar al resto de personas.
+
+–amend: concatena nuevos cambios con cambios previos.
+
+git log: nos muestra la historia de todos los commits que hemos realizados.

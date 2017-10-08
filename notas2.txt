@@ -1,0 +1,43 @@
+En este momento quizás ya quieras taggear o etiquetar los cambios. Para eso existe git tag, este simplemente solo va a agregar una etiqueta.
+Una cosa a destacar es que son ligeras o anotadas, las ligeras se crean con el nombre de la etiqueta, las anotadas son las que llevan además un mensaje usando -m podemos dejar un mensaje.
+Si queremos borrar una etiqueta debemos usar -d, si las queremos listar podemos usar -l y si las queremos renombrar usamos -f.
+Utilizando el Sha-1 podemos crear etiquetas anotadas haciendo referencia a commits viejos.
+
+git tag: nos permite agregar etiquetas a nuestros cambios.
+-a para la anotación
+-m para el mensaje
+
+-l nos muestra la lista de etiquetas
+-f para renombrar
+-d para borrar
+exiten tags lightweight y annotated
+
+git log --oneline: Coloca los commits de manera resumida y en una sola línea.
+–graph: Nos mostraria los diferentes commits en las ramas o bifurcaciones con un asterisco.
+
+-[numero]: Nos permite ver los últimos commits
+
+Documentacion de git log: https://www.git-scm.com/docs/git-log
+
+git diff [SHA-1] : Muestra las diferenias del commit [SHA-1] contra el ultimo commit de la rama en la que actuamente estamos (generalmente master)
+git diff [XXX-1] [XXX-2] : Muestra las diferencias del commit [XXX-1] contra el commit [XXX-2]
+
+git reset --soft [SHA1]: Nos permite quitar los cambios de un commit específico. Deja los archivos en el staging area, listos para hacer un commit.
+
+No amigo el comando git reset --soft sirve para resetear un commit por ejemplo:
+
+si tienes 20 commits y tu quieres resetear desde el commit 15, el commit 16,17,18,19,20 se resetean y los podrás visualizar en el stating area las modificaciones de esos commits, por lo tanto si vuelves a realizar un commit todos esas modificaciones se agregara en un solo commit en este caso el commit numero 16.
+
+En otras palabras no quita un commit del staging area queda como estaba antes de hacer el commit
+
+git reset --mixed [SHA1]: nos elimina los cambios, también del staging area y lo pasa al working directory.
+
+git reset HEAD [file] modificar manualmente los archivos en el staging area del ultimo commit.
+
+git reset --hard [SHA1]: Nos elimina los cambios incluso del working directory, es el más peligroso de todos porque podemos perder parte de nuestro trabajo.
+
+Si tenemos el hash de los más recientes commits, puedes salvarte de los regaños de tu jefe todavía, importante guardar los commits en un archivo. Solo por si acaso.
+
+git reset --soft [SHA 1]: elimina los cambios hasta el staging area
+git reset --mixed [SHA 1]: elimina los cambios hasta el working area
+git reset --hard [SHA 1]: regresa hasta el commit del [SHA 1]

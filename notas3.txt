@@ -1,0 +1,82 @@
+Las ramas son muy importantes si quieres trabajar con un equipo y no quieres tocar la rama master para no crear conflictos,
+
+git branch [nombre] se crea una nueva rama
+-l: listamos las ramas
+-d/-D [nombre]: borramos rama
+-m [nombre] [nombre_nuevo]: para renombrar ramas
+
+git checkout [nombre/sha1]: Nos permite mover entre ramas y entre commits, no vamos a borrar nada. Acá es donde podemos movernos en el tiempo.
+
+git checkout -b [nombre_rama]: Nos permite crear una nueva rama sin necesidad de usar branch
+
+git merge [rama]: Nos permite mezclar los cambios realizados en dicha rama con la rama en la que estamos.
+
+fast-forward: los mezcla automáticamente
+recursive/auto-merging: ambas ramas salieron al mismo tiempo y hay algo nuevo en la rama que la otra no recuerda, por eso hace la mezcla recursiva.
+manual merge: nos va a tocar decirle a git específicamente los cambios que queremos mezclar
+
+git rebase: hace prácticamente lo mismo que merge, cambiamos la historia de nuestro proyecto sin crear bifurcaciones del proyecto. Es mejor usar merge
+Usar solo git rebase de manera local.
+
+-i: de manera interactiva, nos abrira el editor que tengamos definido en la configuración de git.
+
+git stash: es otro de los limbos, como el staging area. Para agregar los cambios estos deben estar en el staging area.
+git stash list: nos muestra la lista de stash que tengamos.
+git stash drop stash@{numero}: nos permite borrar un stash.
+git stash apply: aplicamos el último cambio
+git stash apply stash@{numero}: aplicamos un cambio en especifico
+
+git cherry-pick [SHA1] nos permite cambiar un commit a otra rama para salvarnos la vida.
+
+ssh-keygen -t rsa -b 4096 -C "polidavis28@gmail.com" : para generar una llave ssh
+
+pbcopy < ~/.ssh/id_rsa.pub || cat ~/.ssh/id_rsa.pub: para copiar el contenido de nuestra llave publica
+
+2 formas de traer tus cambios de github a tu repo local:
+
+git fetch: descarga los cambios a una rama generalmente llamada origin/master, seguido de esto tienes que fuisonar esa rama
+$ git fetch origin master 
+# origin= remoto | master= rama del remoto
+# ahora tienes una rama llamada origin/master
+# que pueedes ver con 'git branch -a'
+$ git merge origin/master
+# si obtienes un error usar la siguiente linea
+# git merge origin/master --allow-unrelated-histories
+git pull: es como ejecutar los 2 pasos anteriores(fetch y merge) en uno solo
+$ git pull origin master
+
+Asi subimos nuestros cambios a github:
+git push origin master
+
+Tambien podemos enviar los tags:
+git push origin master --tags
+
+Podemos enviar otras ramas:
+git push origin [otra_rama]
+
+https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet
+
+https://guides.github.com/pdfs/markdown-cheatsheet-online.pdf
+
+<h1>Crear template para issues</h1>
+Agregar un archivo llamado “issue_template.md” en la raíz del proyecto.
+
+En el mismo especificar el formato que queremos que tengan nuestros issues. Por ejemplo:
+
+# Titulo
+
+## Descripción
+
+Lorem ipsum.
+
+**Versión:** X.X
+
+
+GitHub permite usar templates a la hora de generar Pull Request
+
+Crear archivo llamado pull_request_template.md
+Definir los lineamientos usando sintaxis markdown
+Hacer commit
+Ahora todo será mas ordenado cuando generen contribuciones a tu proyecto.
+
+https://gitignore.io

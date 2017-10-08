@@ -1,0 +1,38 @@
+Un sistema que registra los cambios realizados sobre un archivo o conjunto de archivos a lo largo del tiempo. Este tipo de sistemas nos permiten volver en el tiempo y salvar nuestro trabajo.
+
+Los tipos de sistemas de control son:
+
+Local Computer: Solo vive en nuestro computador.
+
+Centralizado: No depende únicamente de un computador en el que se trabaja, sino que depende del súper servidor en donde se almacena la información. El servidor provee las copias a sus hijos, pero solo guarda los cambios en un solo lugar.
+
+Sistema de control distribuidos: Cada uno de los que participan en el proyecto, tienen copia del proyecto que se realiza, por eso no dependemos de un solo computador que almacene toda la información.
+
+Git es un Sistema de Control de Versiones Distribuido.
+
+Tipos:
+
+Local: Vive en nuestro computador. Si le ocurre una catástrofe vamos a perder nuestro trabajo, además de que Ctrl + Z tiene cierta limitación.
+
+Centralizado: Depende de un super server donde está almacenado el repositorio. Si se quema el super server vamos a llorar y perdemos nuestro trabajo.
+
+Distribuido: Cada participante del repositorio tiene una copia local y no afecta el trabajo del resto. No perdemos nuestro trabajo si nuestro se computador se daña, simplemente pedimos una copia a cualquier servidor donde esté almacenada la copia
+
+Git fue creado por Linus Torvalds.
+
+-Velocidad: Puedes trabajar fluidamente desde tu computador
+-Diseño sencillo: El codigo es robusto con las herramientas necesarias, como viajar en el tiempo
+-Fuerte apoyo en el desarrollo no lineal: No trabaja de manera linea, la linea del tiempo tiene bifurcaciones de manera independiente al proyecto principal
+-Completamente distribuido: Cada quien puede tener una copia del proyecto.
+-Capaz de manejar grandes proyectos: Linux, Django, Laravel, etc. Usan git
+
+Git almacena referencias a los archivos que no se han cambiado.
+Cualquier trabajo es local, puedes trabajar en cualquier parte incluso sin internet.
+
+Estos son los tres estados de Git:
+- Working Directory
+- Staging Area. Esta es una área de preparación.
+- Git Directory (repository)
+Estos tres estados representan el ciclo de vida de nuestros archivos dentro de la plataforma.
+
+GitHub Es una plataforma en la que se almacenan los cambios de un proyecto. Además es una plataforma que funciona como una red social. Aquí, las personas que visiten tu sitio puedan darle estrellitas a los proyectos que hayas desarrollado.
