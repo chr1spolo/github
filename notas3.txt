@@ -80,3 +80,5 @@ Hacer commit
 Ahora todo será mas ordenado cuando generen contribuciones a tu proyecto.
 
 https://gitignore.io
+
+https://gist.github.com/tsabat/1498393 para guia de git en ubuntu shell
